@@ -16,6 +16,9 @@
     padding: 0 calc((100% - 644px)/2);
 
 }
+.header__shopping{
+    z-index: 12;
+}
 .header-sort__navbar{
     display: flex;
 }
@@ -74,6 +77,15 @@
     .footer-license_link-heading{
         display: block;
         margin: 0px 0px 20px 0px;
+    }
+    .header__search-history
+    {
+        position: fixed;
+        top: var(--high-header);
+        width: 100%;
+        z-index: 12;
+        right: 0;
+        left: 0;
     }
 }
 
@@ -161,6 +173,22 @@
     }
     .footer-policy__describe-title{
         text-align: center;
+    }
+    .header__withsearch-text{
+        font-size: 1.2rem;
+    }
+    .header__withsearch-check {
+        font-size: 1.3rem;
+    }
+    .header__search-history{
+        position: fixed;
+        top: calc((var(--high-header) + var(--high-navbar-sort)) + 1px);
+        right: 0;
+        left: 0;
+        width: 100%;
+    }
+    .footer-policy__describe-title{
+        padding: 0 20px;
     }
     @keyframes moblie__header-fadeIn {
         from{

@@ -206,7 +206,6 @@ text-decoration: none;
     /* Lam cho chuyen dong toi uu , chuyen dong ta gom 
     opacity & transform */
     will-change: opacity , transform;
-
 }
 .header__navbar-item{
     position: relative;
@@ -216,7 +215,7 @@ text-decoration: none;
     top: 25px;
     right: 0px;
     border: 1px solid #e5e5e5;
-    z-index: 1;
+    z-index: 2;
 }
 .header__nofication-container-item{
     width: 100%;
@@ -560,13 +559,21 @@ text-decoration: none;
     z-index: 12;
     padding: 10px 20px;
     display: none;
-    transform: translateX(var(--out-print));
-    animation: fadeIn linear .2s;
+    transform: translateX(left);
+    animation: fadeInLeft linear .2s;
 }
 .menu__checkox-header:checked ~ .header__moblie-menu-wrapper{
-    --out-print:0;
-    transform: translateX(var(--out-print));
     display: block;
+}
+@keyframes fadeInLeft {
+    from{
+        opacity: 0;
+        left: -80%;
+    }
+    to{
+        opacity: 1;
+        left: 0;
+    }
 }
 .moblie__menu-close{
     position: absolute;
@@ -1260,7 +1267,7 @@ i.header__item-check.fa-solid.fa-check{
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
     animation: fadeIn ease-in .2s;
     display: none;
-
+    z-index: 1;
 }
 .tool-body-listprice-list{
     padding: 0;
